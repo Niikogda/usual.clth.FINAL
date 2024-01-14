@@ -1,0 +1,675 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: .15em;
+}
+
+
+.header {
+    text-transform: uppercase;
+    box-shadow: 0px 5px 15px -5px rgba(0, 0, 0, 0.38);
+    margin-bottom: 30px;
+   
+}
+.header {
+    text-transform: uppercase;
+    box-shadow: 0px 5px 15px -5px rgba(0, 0, 0, 0.38);
+    margin-bottom: 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; 
+}
+
+.main-first, .clothes-main {
+    max-width: 1200px;
+    margin: 80px auto 0; 
+}
+
+
+.header-icons {
+    width: 140px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.black-line {
+    color: white;
+    background-color: black;
+    text-align: center;
+    font-size: 14px;
+    height: 25px;
+    text-transform: lowercase;
+}
+
+li {
+    font-size: 13px;
+}
+
+.main-first, .about-us-main, .clothes-main{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main-first p {
+    margin: 120px 20px 30px;
+    padding: 0;
+    font-weight: bold;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.clothes {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    width: 370px; /* Ширина блоку clothes */
+}
+
+.clothes img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: filter 0.3s ease-in-out;
+}
+
+.clothes:hover::after {
+    content: attr(data-description);
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 500;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.347);
+    padding: 10px;
+    border-radius: 3px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    width: 95%; /* Змінено ширину таблички на 100% */
+    text-align: center;
+}
+
+.clothes:hover img {
+    filter: blur(2px);
+}
+
+.clothes:hover::after {
+    opacity: 1;
+    
+}
+
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+
+.like-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.638); 
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.like-button:hover {
+    color: #ff6666; 
+}
+
+.footer-payments, .footer-socials{
+    display: flex;
+    box-sizing: border-box;
+}
+
+.footer-payments img {
+    width: 40px;
+    height: 20px;
+    margin-right: 5px; 
+    background-color: white;
+    margin-top: 10px;
+}
+.footer-socials img{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px; 
+    margin-top: 10px;
+}
+ul{
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+.footer-content{
+    display: flex;
+    width: 78.9%;
+    margin:0 auto;
+    justify-content: space-between;
+    padding: 50px 0;
+}
+.footer{
+    width: 100%;
+    background-color: #ededed;
+    justify-content: center;
+    
+}
+.footer-block h5{
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+.footer-block a{
+    text-decoration: none;
+    color: rgb(95, 95, 95);
+    font-size: 11px;
+}
+.footer-block a:hover{
+    color: #a3a3a3;
+    
+}
+
+
+.main-contacts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.contacts-in {
+    display: flex;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 10px;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+
+.contact-icon img {
+    width: 30px;
+    height: 30px;
+    filter: brightness(1); /* Задаємо початковий білий фільтр для зображення */
+    transition: filter 0.3s ease-in-out;
+}
+
+.contact-item:hover .contact-icon img {
+    filter: brightness(0); /* Задаємо чорний фільтр при наведенні на блок */
+}
+
+.contact-socialname {
+    margin-top: 5px;
+    
+}
+.contacts-in a{
+    text-decoration: none;
+    color: #000000;
+    font-size: 11px;
+}
+
+.contact-item:hover .contact-socialname {
+    color: #808080; /* Сірий колір тексту при наведенні на блок */
+}
+.main-oops {
+    margin: 280px auto;
+    text-align: center;
+}
+.loader {
+    margin: 0 auto 10px;
+    width: 60px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  .ball {
+    list-style: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #000000;
+  }
+  
+  .ball:nth-child(1) {
+    animation: bounce-1 2.1s ease-in-out infinite;
+  }
+  
+  @keyframes bounce-1 {
+    50% {
+      transform: translateY(-90px);
+      scale: 0.3;
+    }
+  }
+  
+  .ball:nth-child(2) {
+    animation: bounce-3 2.1s ease-in-out 0.3s infinite;
+  }
+  
+  @keyframes bounce-2 {
+    50% {
+      transform: translateY(-90px);
+      scale: 0.3;
+    }
+  }
+  
+  .ball:nth-child(3) {
+    animation: bounce-3 2.1s ease-in-out 0.6s infinite;
+  }
+  
+  @keyframes bounce-3 {
+    50% {
+      transform: translateY(-90px);
+      scale: 0.3;
+    }
+  }
+  .confidentional-main, .delivery-payment-main, .returning-main{
+    width: 79%;
+    margin: 120px auto;
+  }
+  .confidentional-main h3, .delivery-payment-main h3 , .about-us-main h3, .clothes-info h3{
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 22px;
+    margin: 30px 0 15px;
+  }
+  .confidentional-main p, .delivery-payment-main p, .returning-main p, .about-us-main p, .clothes-info p{
+    font-size: 13px;
+    font-weight: 400;
+    text-decoration: none;
+    letter-spacing: 0;
+  
+  }
+  .returning-main{
+    margin-bottom: 250px;
+  }
+  .delivery-payment-main a, .returning-main a{
+    color: #000000;
+    font-weight: 400;
+  }
+
+  .about-us-main {
+    position: relative;
+    margin-top: 120px; /* висота верхнього меню */
+}
+
+.plyr__video-wrapper {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.plyr__video-wrapper video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.plyr__poster {
+    position: absolute;
+    margin-top: 100px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.photos-about-us {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.picturees {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto; /* Рівні відступи по боках */
+    display: flex;
+    justify-content: space-between;
+}
+
+.picturees img {
+    width: calc(25% - 10px); /* 4 фото в рядок з відступами по 10px */
+    max-width: 244px;
+    height: auto;
+    margin-right: 10px; /* Відступ між фото */
+    margin-bottom: 10px; /* Відступ між рядками фото */
+}
+
+.picturees img:last-child {
+    margin-right: 0; /* Відступ між останнім фото та контейнером */
+}
+/* Для екранів шириною більше 768px */
+@media (min-width: 769px) {
+    .picturees img {
+        width: calc(25% - 10px);
+        max-width: 244px;
+        height: auto;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+
+    .picturees img:last-child {
+        margin-right: 0;
+    }
+}
+
+/* Для екранів шириною менше або рівно 768px */
+@media (max-width: 768px) {
+    .picturees img {
+        width: calc(50% - 10px); /* 2 фото в рядок на екранах шириною менше 768px */
+        max-width: 100%; /* Заповнює ширину контейнера */
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+
+    .picturees img:last-child {
+        margin-right: 0;
+    }
+}
+
+
+.basket-main, .likes-main{
+    width: 1200px;
+    margin: 140px auto 280px;
+    
+
+}
+.basket-main p, .basket-main h3, .likes-main p, .likes-main h3{
+    text-align: center;
+    text-transform: uppercase;
+}
+.basket-main h3, .likes-main h3{
+font-weight: 700;
+font-size: 22px;
+margin-bottom: 20px;
+}
+
+.basket-main a, .likes-main a{
+text-decoration: none;
+background-color: #1a1a1a;
+color: #ffffff;
+font-size: 11px;
+padding: 9px;
+}
+.basket-main a:hover, .likes-main a:hover{
+    background-color: #4a4a4a;
+}
+
+.carusel{
+    width: 450px;
+    height: 540px;
+    justify-content: left;
+    margin: 130px 0 40px;
+}
+.clothes-info{
+    margin: 110px 20px 40px;
+}
+.clothes-main{
+    display: flex;
+}
+.clothes-info a{
+    color: #000000;
+    text-decoration: none;
+}
+.clothes-info a:hover{
+    color: #6c6c6c;
+
+}
+.size-choose{
+    margin-top: 40px;
+}
+.color-choose{
+    display: flex;
+    width: 145px;
+    margin: 20px 0;
+    justify-content: space-between;
+}
+.colors{
+    width: 34px;
+    height: 34px;
+    border-radius: 0;
+    box-sizing: border-box;
+    border-color: #ededed;
+    border-style: double;
+}
+.beige{
+    background-color: #eaceb6;
+}
+.caramel{
+    background-color: #cd8262;
+}
+.dark-blue{
+    background-color: #262f3e;
+}
+.purple{
+    background-color: #cabec2;
+}
+.mint{
+    background-color: #a3afa5;
+}
+.dark{
+    background-color: #686765;
+   
+}
+.milk{
+    background: #f1eae2;
+}
+.grey{
+    background-color: #d9d5d2;
+}
+.colors:hover{
+    border-color: #414141;
+}
+.accent-color{
+    width: 42px;
+    height: 42px;
+
+}
+.band{
+    margin-bottom: 80px;
+}
+
+
+@media (max-width: 649px) {
+    .footer-content {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .footer-block {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .footer-socials {
+        text-align: center;
+    }
+
+    .footer-socials ul {
+        padding-left: 0;
+    }
+
+    .footer-socials li {
+        display: inline-block;
+        margin-right: 10px;
+    }
+}
+
+
+
+
+@media (max-width: 649px) {
+    .basket-main, .likes-main{
+        max-width: 100%;
+    }
+    .clothes-main {
+        flex-direction: column;
+    }
+
+    .carusel {
+        margin-bottom: 20px;
+        max-width: 100%;
+    }
+
+    .carousel-inner {
+        max-width: 100%;
+    }
+
+    .carousel-item img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .clothes-info {
+        text-align: center;
+    }
+
+    .size-choose {
+        margin-top: 20px;
+    }
+
+    .dropdown {
+        width: 100%;
+    }
+}
+
+
+
+@media (max-width: 649px) {
+    .main-first {
+        flex-direction: column;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .clothes {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .like-button {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 649px) {
+    .clothes {
+        position: relative;
+    }
+
+    .clothes::after {
+        content: ""; 
+        display: none; 
+    }
+
+    .clothes:hover::before {
+        content: attr(data-description); 
+        position: absolute;
+        bottom: 100%; /* Position the text above the image */
+        left: 0;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.9); 
+        padding: 10px;
+        box-sizing: border-box;
+        text-align: center;
+        font-size: 14px;
+        color: #333;
+        /* z-index: 1;  */
+        display: block;
+    }
+}
+
+
+
+
+
+
+
+
+@media (min-width: 648px) and (max-width: 1077px) {
+    .basket-main, .likes-main{
+        max-width: 100%;
+    }
+    .main-first {
+        padding: 20px;
+        display: inline;
+    }
+
+    .content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .clothes {
+        width: 48%; 
+        margin-bottom: 20px;
+        position: relative;
+    }
+
+    .like-button {
+        margin-top: 10px;
+    }
+
+   
+    .clothes::before {
+        content: ""; 
+        display: none;
+    }
+
+    .clothes:hover::before {
+        content: attr(data-description);
+        position: absolute;
+        /* bottom: 100%; */
+        left: 0;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.9);
+        /* padding: 10px; */
+        box-sizing: border-box;
+        text-align: center;
+        font-size: 8px;
+        color: #333;
+        /* z-index: 1; */
+        display: block;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
